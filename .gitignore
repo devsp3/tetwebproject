@@ -1,0 +1,49 @@
+# Build artifacts
+bin/
+obj/
+
+# Publish output
+publish/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+*.sln.iml
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Visual Studio cache
+*.vs/
+
+# Publish related
+*.publishsettings
+
+# Backup files
+*~
+*.bak
+*.orig
