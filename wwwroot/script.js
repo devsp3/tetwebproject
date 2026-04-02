@@ -2,7 +2,8 @@ var clientTimeHint = 'This comes from your browser using JavaScript\'s new Date(
 var serverTimeHint = 'This comes from the C# server using DateTime.Now, fetched with fetch().';
 var greetingHint = 'This text is stored in a variable in Program.cs and got here via GET /api/greeting.';
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', async function () {
+    await loadSharedHeader();
     showCurrentDate();
     loadServerTime();
     showDaysLeft();
@@ -11,6 +12,25 @@ document.addEventListener('DOMContentLoaded', function () {
     loadServerMessage();
     addHoverTooltips();
 });
+
+
+function loadSharedHeader() {
+    var placeForHeader = document.getElementById('shared-header');
+    if (!placeForHeader) {
+        return Promise.resolve();
+    }
+
+    return fetch('/header.html')
+        .then(function (response) {
+            if (!response.ok) {
+                throw new Error('Header load failed');
+            }
+            return response.text();
+        })
+        .then(function (html) {
+            placeForHeader.innerHTML = html;
+        });
+}
 
 function showCurrentDate() {
     const dateElement = document.getElementById('current-date');

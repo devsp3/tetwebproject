@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    overflow-y: scroll;
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -14,6 +17,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 
 header {
     background-color: #1f4e79;
@@ -38,6 +42,7 @@ nav a {
     color: #fff;
     padding: 12px 18px;
     text-decoration: none;
+    font-weight: 600;
 }
 
 nav a:hover {
@@ -46,7 +51,7 @@ nav a:hover {
 
 nav a.active {
     background-color: #2d6ca2;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
 main {
