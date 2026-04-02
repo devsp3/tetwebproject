@@ -1,0 +1,165 @@
+/* Main Stylesheet */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #1f4e79;
+    color: #fff;
+    padding: 24px 16px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 8px;
+    font-size: 2rem;
+}
+
+nav {
+    background-color: #163a5a;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #fff;
+    padding: 12px 18px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #245b8d;
+}
+
+nav a.active {
+    background-color: #2d6ca2;
+    font-weight: bold;
+}
+
+main {
+    width: min(900px, calc(100% - 32px));
+    margin: 24px auto;
+}
+
+section {
+    background-color: #fff;
+    border: 1px solid #d6d6d6;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 12px;
+    color: #1f4e79;
+}
+
+h3 {
+    margin: 12px 0 8px;
+    color: #1f4e79;
+}
+
+p,
+ul,
+ol,
+table,
+img,
+pre {
+    margin-bottom: 16px;
+}
+
+li {
+    margin-left: 20px;
+    margin-bottom: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #cfcfcf;
+    padding: 10px;
+    text-align: left;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+pre {
+    background-color: #f0f0f0;
+    border: 1px solid #d6d6d6;
+    padding: 12px;
+    overflow-x: auto;
+}
+
+.panel {
+    background-color: #eef5fb;
+    border: 1px solid #b9d2e6;
+    padding: 16px;
+}
+.panel2 {
+    background-color: #eed5ab;
+    border: 1px solid #b9d2e6;
+    padding: 16px;
+}
+
+.img-float {
+    float: right;
+    width: 120px;
+    margin: 0 0 16px 24px;
+}
+
+.hover-info {
+    font-size: 0.85em;
+    color: #555;
+    background-color: #eef5fb;
+    border: 1px solid #b9d2e6;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-left: 8px;
+}
+
+footer {
+    background-color: #163a5a;
+    color: #fff;
+    text-align: center;
+    padding: 16px;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        width: calc(100% - 20px);
+    }
+
+    section {
+        padding: 16px;
+    }
+}

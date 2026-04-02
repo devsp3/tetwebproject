@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Internet Project Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Internet Project Guide - Ver 0.1</h1>
+        <p>A simple sample site for explaining the assignment and showing basic web app code.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="requirements.html">Requirements</a>
+        <a href="examples.html">Example</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>About This Project</h2>
+            <p>This site is intentionally small. It is intended to serve as a teaching by example thing that you can use to accelerate understanding.</p>
+
+            <h2>Project Purpose</h2>
+            <p>The project serves two purposes:</p>
+            <ul>
+                <li>Explain what you are expected to build.</li>
+                <li>Show a basic example of a multi-page web with a C# backend.</li>
+            </ul>
+
+            <h2>How It Is Built</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Part</th>
+                        <th>What it does</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML pages</td>
+                        <td>Provide the content for Home, About, Requirements, and Example.</td>
+                    </tr>
+                    <tr>
+                        <td>CSS file</td>
+                        <td>Keeps the layout clean and consistent without a complex design.</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript file</td>
+                        <td>Handles a few basic tasks such as the date and one API call.</td>
+                    </tr>
+                    <tr>
+                        <td>C# file</td>
+                        <td>Serves the pages and returns some data for the browser to display.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>HTML of the elements Used</h2>
+            <p></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Element</th>
+                        <th>Usage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;</td>
+                        <td>Page titles and section headings</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;p&gt;</td>
+                        <td>Body text and descriptions</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;a&gt;</td>
+                        <td>Navigation links and internal references</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;img&gt;</td>
+                        <td>Illustrative image on the example page</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;table&gt;</td>
+                        <td>Requirement summaries and page structure</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</td>
+                        <td>Requirement lists and steps</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;header&gt;, &lt;nav&gt;, &lt;footer&gt;</td>
+                        <td>Shared layout across pages</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Why It Is Simple</h2>
+            <p>The code avoids extra features so you can focus on the basics: page structure, styling, simple JavaScript, and a bit of c#.
+            The learning curve of c# .NET Minimal API is gentle. You write C# code in a single file, define routes with
+                <code>app.MapGet</code> and <code>app.MapPost</code>, and the server handles the rest.</p>
+
+            <h2>What JavaScript Does</h2>
+            <ul>
+                <li>Shows the current date.</li>
+                <li>Highlights the active navigation link.</li>
+                <li>Fetches the greeting, server time, and current message from the server.</li>
+                <li>Show some text when mouse hovers certain elements</li>
+            </ul>
+
+            <h2>Server-Side Implementation</h2>
+            <p>The C# backend uses .NET Minimal API. It exposes three GET routes and one POST route:</p>
+            <ul>
+                <li><code>GET /api/greeting</code> returns a welcome message stored in a C# variable.</li>
+                <li><code>GET /api/current-time</code> returns the current server date and time.</li>
+                <li><code>GET /api/message</code> returns the current message stored on the server.</li>
+                <li><code>POST /api/message</code> updates the stored message sent from the browser form.</li>
+            </ul>
+        </section>
+
+     
+    </main>
+
+    <footer>
+        <p>Built with HTML, CSS, JavaScript, and C# .NET Minimal API.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

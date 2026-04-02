@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example - Internet Project Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Internet Project Guide - Ver 0.1</h1>
+        <p>A simple sample site for explaining the assignment and showing basic web app code.</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="requirements.html">Requirements</a>
+        <a href="examples.html">Example</a>
+    </nav>
+
+    <main>
+        <img class="img-float" src="images/popcorn.png" alt="Example placeholder image for the project page">
+        <section>
+            <h2>Small Code Example</h2>
+            
+            <p>This page shows a simple example layout with a local image and a static checklist written directly in HTML.</p>
+
+            
+        </section>
+        <div class="panel2">
+            <h2>Hover over the text below to see how stuff works</h2>
+           
+            
+            <p id="client-time-row"><strong>Your Browser's Date & Time:</strong> <span id="current-date">Loading...</span> <span class="hover-info" id="client-time-hover"></span></p>
+            <p id="server-time-row"><strong>Server Date & Time:</strong> <span id="server-date">Loading...</span> <span class="hover-info" id="server-time-hover"></span></p>
+            <p id="greeting-row"><strong>Greeting:</strong> <span id="greeting-message">Loading...</span> <span class="hover-info" id="greeting-hover"></span></p>
+        </div>    
+        <section>
+            <h2>Simple GET and POST Example</h2>
+            <p><strong>Current message:</strong> <span id="server-message">Loading...</span></p>
+
+            <form method="post" action="/api/message">
+                <p>
+                    <label for="message">New message:</label>
+                </p>
+                <p>
+                    <input id="message" name="message" type="text" required>
+                    <button type="submit">Send</button>
+                </p>
+            </form>
+        </section>
+
+        <section>
+            <h2>Example Checklist</h2>
+            <ul>
+                <li>Pages: Include multiple pages with a shared layout and navigation.</li>
+                <li>About section: Explain what the project is and what technologies are used.</li>
+                <li>HTML elements: Use headings, links, lists, tables, and at least one image.</li>
+                <li>CSS: Keep one main stylesheet and show basic layout styling.</li>
+                <li>JavaScript: Add a small interactive feature such as showing the current date.</li>
+                <li>C# server code: Serve the website files.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>This is a simple site</h2>
+            
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Part</th>
+                        <th>What It Does</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Displays the checklist and page content directly.</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>Applies the shared page styling.</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Shows the date and highlights the current page in the navigation.</td>
+                    </tr>
+                    <tr>
+                        <td>C#</td>
+                        <td>Runs the web server and serves the files.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Why This Helps</h3>
+            <ul>
+                <li>The content is visible directly in the HTML.</li>
+                <li>The JavaScript stays short and easy to explain.</li>
+                <li>The C# file is minimal. It starts the website and handles a few POST/GET routes.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with HTML, CSS, JavaScript, and C# .NET Minimal API.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
