@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     showDaysLeft();
     setActiveNavLink();
     loadGreetingMessage();
-    loadServerMessage();
+    loadMessages();
     addHoverTooltips();
 });
 
@@ -148,10 +148,10 @@ function addHoverTooltips() {
     });
 }
 
-function loadServerMessage() {
-    const target = document.getElementById('server-message');
+function loadMessages() {
+    const messageBoard = document.getElementById('message-board');
 
-    if (!target) {
+    if (!messageBoard) {
         return;
     }
 
@@ -159,10 +159,11 @@ function loadServerMessage() {
         .then(function (response) {
             return response.text();
         })
-        .then(function (text) {
-            target.textContent = text;
+        .then(function (messages) {
+            messageBoard.value = messages;
+            messageBoard.scrollTop = messageBoard.scrollHeight;
         })
         .catch(function () {
-            target.textContent = 'Could not load message';
+            messageBoard.value = 'Could not load messages';
         });
 }

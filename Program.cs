@@ -27,9 +27,11 @@ IResult GetMessage()
 IResult UpdateMessage(HttpRequest request)
 {
 	var message = request.Form["message"].ToString();
-
-	currentMessage = message;
-
+	if (!string.IsNullOrEmpty(message))
+	{
+		var timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+		currentMessage += $"\n[{timestamp}] {message}";
+	}
 	return Results.Redirect("/examples.html");
 }
 

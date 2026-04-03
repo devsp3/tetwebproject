@@ -28,15 +28,16 @@
             <p id="greeting-row"><strong>Greeting:</strong> <span id="greeting-message">Loading...</span> <span class="hover-info" id="greeting-hover"></span></p>
         </div>    
         <section>
-            <h2>Simple GET and POST Example</h2>
-            <p><strong>Current message:</strong> <span id="server-message">Loading...</span></p>
+            <h2>Example of a simple message board implemented with GET and POST</h2>
+
+            <textarea id="message-board" rows="10" style="width: 100%; overflow-y: scroll;" readonly>Loading messages...</textarea>
 
             <form method="post" action="/api/message">
                 <p>
                     <label for="message">New message:</label>
                 </p>
                 <p>
-                    <input id="message" name="message" type="text" required>
+                    <input id="message" name="message" type="text">
                     <button type="submit">Send</button>
                 </p>
             </form>
