@@ -1,11 +1,11 @@
-var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+WebApplication app = builder.Build();
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
-var greetingMessage = "Welcome to the Internet Project Guide";
-var currentMessage = "Hello from the server";
+string greetingMessage = "Welcome to the Internet Project Guide";
+string currentMessage = "Hello from the server";
 
 app.MapGet("/api/greeting", GetGreeting);
 app.MapGet("/api/message", GetMessage);
@@ -26,10 +26,10 @@ IResult GetMessage()
 
 IResult UpdateMessage(HttpRequest request)
 {
-	var message = request.Form["message"].ToString();
+	string message = request.Form["message"].ToString();
 	if (!string.IsNullOrEmpty(message))
 	{
-		var timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+		string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 		currentMessage += $"\n[{timestamp}] {message}";
 	}
 	return Results.Redirect("/examples.html");
