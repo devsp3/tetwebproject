@@ -5,7 +5,7 @@ app.UseDefaultFiles();
 app.UseStaticFiles();
 
 string greetingMessage = "Welcome to the Internet Project Guide";
-string currentMessage = "Hello from the server";
+string allMessages = "Hello from the server";
 
 app.MapGet("/api/greeting", GetGreeting);
 app.MapGet("/api/message", GetMessage);
@@ -21,7 +21,7 @@ IResult GetGreeting()
 
 IResult GetMessage()
 {
-	return Results.Text(currentMessage);
+	return Results.Text(allMessages);
 }
 
 IResult UpdateMessage(HttpRequest request)
@@ -30,7 +30,7 @@ IResult UpdateMessage(HttpRequest request)
 	if (!string.IsNullOrEmpty(message))
 	{
 		string timestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-		currentMessage += $"\n[{timestamp}] {message}";
+		allMessages += $"\n[{timestamp}] {message}";
 	}
 	return Results.Redirect("/examples.html");
 }
